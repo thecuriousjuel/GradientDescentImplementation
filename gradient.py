@@ -8,14 +8,17 @@ def derivative1(m, c, x, y):
         s += (c + m * x[i]) - y[i]
     return (1 / len(x)) * s
 
+
 def derivative2(m, c, x, y):
     s = 0
     for i in range(len(x)):
         s += ((c + m * x[i]) - y[i]) * x[i]
     return (1 / len(x)) * s
 
+
 def error_fun(m, c, x, y):
     return (1 / (2*len(x))) * sum(((c + m * x) -y) ** 2)
+    
     
 x = np.arange(30) 
 y = 9 + 12 * x
@@ -32,7 +35,8 @@ for i in cost_m:
 
 plt.plot(cost_m, new_m)
 
-for i in range(1000):
+
+for i in range(100):
     d1 = derivative1(m, c, x, y)
     d2 = derivative2(m, c, x, y)
     

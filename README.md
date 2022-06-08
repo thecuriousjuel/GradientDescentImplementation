@@ -1,1 +1,3 @@
 # GradientDescentImplementation
+
+![Output](output.png)
